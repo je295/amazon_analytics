@@ -41,10 +41,10 @@
 
 | 文件 | 说明 |
 |------|------|
-| `etl_clean.py` | ETL 数据清洗脚本 |
-| `analytics.py` | 数据分析脚本 |
-| `amazon_analytics_01create_table.sql` | 建表脚本 |
-| `amazon_analytics_agg DWS-ADS.sql` | 聚合脚本 |
+| `etl_clean.py` | ETL 数据清洗脚本 数据分析脚本 |
+| `analytics.py` | 生成数据脚本 |
+| `amazon_analytics_ods_amazon_orders.sql` | 原始订单脚本 |
+| `amazon_analytics_dwd_amazon_orders.sql` | 清洗后的订单脚本 |
 | `亚马逊多站点销售分析.pbix` | Power BI 仪表板 |
 
 ## 🚀 使用方法
@@ -58,7 +58,7 @@
 ### 2. 建库建表
 
 ```bash
-mysql -u root -p < amazon_analytics_01create_table.sql
+mysql -u root -p < amazon_analytics_ods_amazon_orders.sql
 ```
 
 ### 3. 生成原始数据 + 脏数据 
@@ -70,12 +70,12 @@ python analytics.py
 ### 4. ETL清洗 + 数据分析
 
 ```bash
-python analytics.py
+python etl_clean.py
 ```
 
 ### 5. 打开 Power BI
 
-用 **Power BI Desktop** 打开 `亚马逊多站点销售分析.pbix`
+用 **Power BI Desktop** 打开 `amazon_dashboard.pbix`
 
 ---
 
