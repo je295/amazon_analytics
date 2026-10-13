@@ -106,7 +106,7 @@ python analytics.py
 ## 📧 联系方式
 
 - GitHub：[@je295](https://github.com/je295)
-- 邮箱：（改成你的邮箱）
+- 邮箱：ab3_0926@qq.com
 
 ---
 
